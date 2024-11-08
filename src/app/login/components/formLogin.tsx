@@ -7,9 +7,6 @@ import { Button } from "@/components/ui/button";
 import { InputField } from "@/components/globals/inputField";
 import { LogIn } from "lucide-react";
 import { formSchemaLogin } from "./schema";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
 
 type Response = {
 	data: {
@@ -20,9 +17,6 @@ type Response = {
 };
 
 export function FormLogin() {
-	const [submitting, setSubmitting] = useState(false);
-	console.log(submitting);
-	const router = useRouter();
 	const methods = useForm({
 		defaultValues: {
 			email: "",
